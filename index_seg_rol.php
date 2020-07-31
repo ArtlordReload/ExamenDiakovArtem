@@ -28,7 +28,7 @@
         </tr>
 
         <?php
-        $sql = "SELECT COD_ROL, NOMBRE, FROM seg_rol";
+        $sql = "SELECT COD_ROL, NOMBRE FROM seg_rol";
         $result = $conex->query($sql);
 
         if ($result->num_rows > 0) {
@@ -36,8 +36,8 @@
             while ($row = $result->fetch_assoc()) {
         ?>
                 <tr>
-                    <td><?php echo $row["cod_rol"]; ?></td>
-                    <td><?php echo $row["nombre"]; ?></td>
+                    <td><?php echo $row["COD_ROL"]; ?></td>
+                    <td><?php echo $row["NOMBRE"]; ?></td>
                     <td>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
